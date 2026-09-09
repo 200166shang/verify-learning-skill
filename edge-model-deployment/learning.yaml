@@ -1,0 +1,48 @@
+version: 1
+
+topic:
+  id: edge-model-deployment
+  title: 端侧模型部署到底在做什么
+  workspace: edge-model-deployment
+  status: active
+
+goal:
+  desired_outcome:
+    - 能够解释清楚一个训练完成的深度学习模型，怎样从模型文件进入端侧程序，经过输入预处理、Runtime 推理、后处理，最终变成业务程序可以使用的结果。
+    - 面对真实端侧部署代码时，能够判断主要代码分别处于部署链路的哪个环节。
+  central_question: 一个训练完成的深度学习模型，如何在端侧程序中完成从模型文件到业务结果的完整推理链路？
+  working_claim: 端侧模型部署的核心，是把离线训练得到的模型转化为端侧 Runtime 可执行的推理链路，并正确完成输入、推理、输出与业务结果之间的数据衔接。
+  out_of_scope:
+    - 深入推导训练阶段的数学公式
+    - 从零训练神经网络
+    - CUDA kernel 或 NPU 算子开发
+    - 与当前部署理解无直接关系的完整深度学习课程
+
+progress:
+  stage: filling
+  map_confirmed: true
+  draft_created: true
+  next_action: 围绕“真正端侧程序如何把这些环节串起来”继续补充真实部署链路，并在出现明确认知缺口时创建 KnowledgeTicket。
+
+artifacts:
+  map: learning-map.md
+  mother_document: 端侧模型部署到底在做什么.md
+  tickets_directory: tickets
+  records_directory: records
+
+materials:
+  - id: material-001
+    type: conversation
+    ref: 当前项目中关于 Tensor、Forward、训练与推理、模型文件、预处理与后处理的既有讨论
+    role: prior-learning-material
+
+tickets: []
+related_records: []
+candidate_questions: []
+decisions:
+  - date: 2026-09-09
+    decision: Goal 采用“理解端侧模型从模型文件到业务结果的完整推理链路，并能定位真实部署代码职责”。
+    reason: 与实际阅读端侧部署模块代码的需求一致。
+  - date: 2026-09-09
+    decision: 初始 Learning Map 只保留已确认的问题，不预生成完整端侧部署知识树。
+    reason: Learning Map 记录用户真正提出或确认要研究的问题，而不是 AI 自动生成课程。
