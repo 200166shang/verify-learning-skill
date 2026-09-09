@@ -4,7 +4,7 @@ topic:
   id: edge-model-deployment
   title: 端侧模型部署到底在做什么
   workspace: edge-model-deployment
-  status: active
+  status: complete
 
 goal:
   desired_outcome:
@@ -19,10 +19,10 @@ goal:
     - 与当前部署理解无直接关系的完整深度学习课程
 
 progress:
-  stage: filling
+  stage: complete
   map_confirmed: true
   draft_created: true
-  next_action: Execute K-001 with learning-note, then stop at the resolved-ticket boundary before synthesis integration.
+  next_action: 当前已确认 Learning Map 全部完成；等待用户提出或接受新的学习问题后再继续扩展。
 
 artifacts:
   map: learning-map.md
@@ -39,8 +39,12 @@ materials:
 tickets:
   - id: K-001
     path: tickets/K-001-end-to-end-inference-flow.md
-    status: open
-related_records: []
+    status: integrated
+related_records:
+  - id: K-001
+    title: 端侧程序如何把模型部署各环节串起来
+    path: records/K-001端侧推理完整链路.md
+    relation: supports end-to-end-flow
 candidate_questions: []
 decisions:
   - date: 2026-09-09
@@ -52,3 +56,6 @@ decisions:
   - date: 2026-09-09
     decision: Re-capture K-001 under the current KnowledgeTicket v2 contract after removing the earlier invalid partial ticket.
     reason: Regression-test the contract-enforcement fix merged in learning-skill PR #24.
+  - date: 2026-09-09
+    decision: 将 K-001 的 resolved LearningRecord 最小整合回母文档，并完成当前已确认 Learning Map。
+    reason: K-001 已解决当前唯一未完成的正式学习节点。
