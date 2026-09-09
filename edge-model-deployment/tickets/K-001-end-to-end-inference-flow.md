@@ -2,7 +2,7 @@
 version: 2
 id: K-001
 title: 端侧程序如何把模型部署各环节串起来？
-status: resolved
+status: integrated
 
 topic:
   id: edge-model-deployment
