@@ -1,10 +1,9 @@
-version: 1
+version: 2
 
 topic:
   id: edge-model-deployment
   title: 端侧模型部署到底在做什么
   workspace: edge-model-deployment
-  status: active
 
 goal:
   desired_outcome:
@@ -19,10 +18,7 @@ goal:
     - 与当前部署理解无直接关系的完整深度学习课程
 
 progress:
-  stage: filling
   map_confirmed: true
-  draft_created: true
-  next_action: 将下一份已经完成的历史学习内容 Materialize 为 standalone LearningRecord，再按需整合并补齐对应 Map completion provenance。
 
 artifacts:
   map: learning-map.md
@@ -39,7 +35,6 @@ materials:
 tickets:
   - id: K-001
     path: tickets/K-001-end-to-end-inference-flow.md
-    status: integrated
 
 related_records:
   - id: K-001
