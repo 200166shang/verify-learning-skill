@@ -75,23 +75,8 @@ candidate_questions: []
 
 decisions:
   - date: 2026-09-09
-    decision: Goal 采用“理解端侧模型从模型文件到业务结果的完整推理链路，并能定位真实部署代码职责”。
-    reason: 与实际阅读端侧部署模块代码的需求一致。
+    decision: Goal 聚焦理解端侧模型从模型文件到业务结果的完整推理链路，并能定位真实部署代码职责。
+    reason: 这是当前主题持续有效的学习范围约束。
   - date: 2026-09-09
-    decision: 初始 Learning Map 只保留已确认的问题，不预生成完整端侧部署知识树。
-    reason: Learning Map 记录用户真正提出或确认要研究的问题，而不是 AI 自动生成课程。
-  - date: 2026-09-09
-    decision: Re-capture K-001 under the current KnowledgeTicket v2 contract after removing the earlier invalid partial ticket.
-    reason: Regression-test the contract-enforcement fix merged in learning-skill PR #24.
-  - date: 2026-09-09
-    decision: 将 K-001 的 resolved LearningRecord 最小整合回母文档，并完成当前已确认 Learning Map。
-    reason: K-001 已解决当前唯一未完成的正式学习节点。
-  - date: 2026-09-09
-    decision: 将 records/Tensor基础.md 作为 standalone LearningRecord 接入母文档，并接受其作为“模型看到的数据到底是什么？”节点的完成证据。
-    reason: 该 Record 已将历史 Tensor 学习结果 Materialize 并完成修订，当前用户明确要求以 accepted-existing-material 记录 completion provenance。
-  - date: 2026-09-09
-    decision: 将其余仅依赖历史会话、尚未形成 completion provenance 的节点从 [x] 调整为 [~]，并将 topic 从 complete 恢复为 active/filling。
-    reason: 最新 completion contract 要求每个 [x] 都必须有可审计的 map_completions 证据，不能仅依赖会话历史。
-  - date: 2026-09-09
-    decision: 将 records/图片如何变成Input Tensor.md 作为 standalone LearningRecord 接入母文档，并接受其作为“模型输入为什么需要预处理？”节点的完成证据。
-    reason: 用户审阅后明确表示满意，并要求调用 learning-synthesis: integrate 接到既有预处理节点。
+    decision: Learning Map 只把用户提出或明确接受的问题作为正式节点，不自动生成完整端侧部署课程树。
+    reason: Map 表达学习决策与问题脉络，而不是通用知识分类。
