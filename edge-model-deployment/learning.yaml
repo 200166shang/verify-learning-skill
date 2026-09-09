@@ -22,7 +22,7 @@ progress:
   stage: filling
   map_confirmed: true
   draft_created: true
-  next_action: 围绕“真正端侧程序如何把这些环节串起来”继续补充真实部署链路，并在出现明确认知缺口时创建 KnowledgeTicket。
+  next_action: Execute K-001 with learning-note, then stop at the resolved-ticket boundary before synthesis integration.
 
 artifacts:
   map: learning-map.md
@@ -36,7 +36,10 @@ materials:
     ref: 当前项目中关于 Tensor、Forward、训练与推理、模型文件、预处理与后处理的既有讨论
     role: prior-learning-material
 
-tickets: []
+tickets:
+  - id: K-001
+    path: tickets/K-001-end-to-end-inference-flow.md
+    status: open
 related_records: []
 candidate_questions: []
 decisions:
@@ -46,3 +49,6 @@ decisions:
   - date: 2026-09-09
     decision: 初始 Learning Map 只保留已确认的问题，不预生成完整端侧部署知识树。
     reason: Learning Map 记录用户真正提出或确认要研究的问题，而不是 AI 自动生成课程。
+  - date: 2026-09-09
+    decision: Re-capture K-001 under the current KnowledgeTicket v2 contract after removing the earlier invalid partial ticket.
+    reason: Regression-test the contract-enforcement fix merged in learning-skill PR #24.
