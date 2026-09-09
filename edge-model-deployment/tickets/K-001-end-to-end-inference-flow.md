@@ -2,7 +2,7 @@
 version: 2
 id: K-001
 title: 端侧程序如何把模型部署各环节串起来？
-status: open
+status: resolved
 
 topic:
   id: edge-model-deployment
@@ -16,7 +16,7 @@ why_needed: >
 
 gap_type: concept
 
-result: null
+result: records/K-001端侧推理完整链路.md
 ---
 
 # K-001 — 端侧程序如何把模型部署各环节串起来？
