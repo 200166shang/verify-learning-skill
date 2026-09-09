@@ -15,9 +15,19 @@ sources:
   - type: conversation
     ref: 当前项目中“预处理与后处理”历史学习内容，以及后续关于“一个图片如何被转换成一个 Tensor”的讨论
     note: 本记录只整理“图片 → Input Tensor”的预处理链路，不展开模型后处理。
+relations:
+  - type: derived-from
+    ref: records/Tensor基础.md
+    question: 一个图片是如何被转换成一个 Tensor 的呢？
 ---
 
 # 图片如何变成 Input Tensor
+
+## 来源脉络
+
+[Tensor：端侧模型实际处理的数据是什么](Tensor基础.md)
+→ 阅读时产生问题：“一个图片是如何被转换成一个 Tensor 的呢？”
+→ 当前记录继续回答这个问题。
 
 端侧图像模型并不会直接理解“这是一张 JPEG 图片”或者“这是摄像头画面”这样的业务概念。模型真正接收的是一块满足输入契约的 **Tensor**。因此，所谓“图片转换成 Tensor”，本质上不是把图片变成某种神秘的新信息，而是把图片中的像素数据解码出来，再按照模型要求重新调整尺寸、数值类型、数值范围和维度排列，最终组织成 Runtime 可以作为输入读取的 Tensor。
 
